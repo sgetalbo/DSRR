@@ -1,0 +1,42 @@
+---
+title: "How to DSRR"
+author: "Ellen Talbot"
+date: "28/03/2018"
+output: html_document
+---
+
+## How to: extract answers from a LearnR/Shiny app.
+
+#### 1. Using shiny to mimic a google form
+
+I really like this idea of using shiny to mimic a google form. 
+https://deanattali.com/2015/06/14/mimicking-google-form-shiny/#download
+
+I've had a quick go here : https://github.com/sgetalbo/DSRR
+
+
+#### 2. Persistent data storage
+
+He also produces a great blog post on persistent data storage
+https://deanattali.com/blog/shiny-persistent-data-storage/
+
+I think Google sheets might be the way to go with this as we are likely to want persistent data storage accessible by more than one team member. 
+
+"If you don’t want to deal with the formality and rigidity of a database, another option for storing tabular data is in a Google Sheet. One nice advantage of Google Sheets is that they are easy to access from anywhere; but unlike with databases, with Google Sheets data can be overwritten with multiple concurrent users.
+
+You can use the googlesheets package to interact with Google Sheets from R. To connect to a specific sheet, you will need either the sheet’s title or key (preferably key, as it is unique).
+
+Setup: All you need to do is create a Google Sheet and set the top row with the names of the fields. You can do that either via a web browser or by using the googlesheets package. You also need to have a Google account. The googlesheets package uses a similar approach to authentication as rdrop2, and thus you also need to authenticate in a similar fashion, such as by copying a valid .httr-oauth file to your Shiny directory."
+
+Persistent storage lets you do more with your Shiny apps. You can even use persistent storage to access and write to remote data sets that would otherwise be too big to manipulate in R.
+
+He has lots of code to do this - I am struggling to make sesne of it though! 
+
+## How to: auto generate responses to these extracted answers 
+
+Once we have responses in a dataframe, I think it would be possible to have a df with various responses to each question depending on their answer and generate a report using if/ifelse statements then generate those answers into a pdf/doc.  
+
+Or perhaps build the answers into the shiny app and give them the option to download the whole thing as a report? 
+
+
+
